@@ -3,6 +3,8 @@ import argparse
 import re
 import threading
 import random
+import time
+
 
 def random_data():
     res = ""
@@ -86,6 +88,7 @@ for input_field in input_fields:
         entries[name] = "FUZZ"
 
 print("{SPAMMING} count=", count, ", threads=", threads, ", rpt=", count // threads, sep="")
+start_time = time.time()
 
 threads_list = []
 for _ in range(threads):
@@ -95,4 +98,8 @@ for _ in range(threads):
 
 for thread in threads_list:
     thread.join()
+
+end_time = time.time()
+
+print("~ Took", end_time - start_time, "seconds ~")
 print(" -= DONE =- ")
