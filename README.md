@@ -30,6 +30,6 @@ To submit 1000 forms with 1000 threads
 ~ Took 31.786604166030884 seconds ~
 ```
 
-To submit 1000 forms with 1000 threads
+To submit 1000 forms with 100 threads
 
 ~50-60 threads is optimal (default:1)
